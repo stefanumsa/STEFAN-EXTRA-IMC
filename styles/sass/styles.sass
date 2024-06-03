@@ -1,0 +1,505 @@
+@media (max-width: 767px) 
+  .desktop 
+      display: none
+  
+  .tablet 
+      display: none
+  
+
+
+
+@media (man-width: 768px) and (max-width: 1023) 
+  .desktop 
+      display: none
+  
+  .movil 
+      display: none
+  
+
+
+
+@media (min-width: 1024px) 
+  .tablet 
+      display: none
+  
+  .movil 
+      display: none
+  
+
+
+body 
+    font-family: Arial, sans-serif
+    margin: 0
+    padding: 0
+
+  
+
+/* Barra superior */
+
+nav  
+  background-color: rgb(11, 194, 231)
+  color: black
+  padding: 10px 0
+  text-align: center
+  box-shadow: 10px 10px 10px grey
+  position: fixed 
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 1000 
+
+
+nav ul 
+  list-style-type: none
+  margin: 10px
+  padding: 0
+
+
+nav ul li 
+  display: inline-block
+  margin-right: 20px
+
+
+nav ul li a 
+  color: white
+  text-decoration: none
+  font-weight: bold
+  padding: 5px 10px
+  border-radius: 5px
+  transition: background-color 0.3s
+  font-size: 20px
+
+
+nav ul li a:hover 
+  background-color: rgb(49, 2, 204)
+
+
+h1, form 
+  margin-top: 60px 
+
+
+/* menu desplegable */
+nav ul li.dropdown 
+  display: inline-block
+  position: relative
+
+
+nav ul li.dropdown .dropdown-content 
+  display: none
+  position: absolute
+  background-color: rgb(11, 194, 231)
+  min-width: 160px
+  box-shadow: 10px 10px 1000000px grey
+  z-index: 1
+
+
+nav ul li.dropdown .dropdown-content a 
+  color: white
+  padding: 12px 16px
+  text-decoration: none
+  display: block
+
+
+nav ul li.dropdown .dropdown-content a:hover 
+  background-color: rgb(49, 2, 204)
+
+
+nav ul li.dropdown:hover .dropdown-content 
+  display: block
+
+
+
+  /* login */
+  .login-container
+    max-width: 400px
+    margin: 50px auto
+    padding: 30px
+    border: 3px solid rgb(11, 194, 231)
+    border-radius: 10px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 90%
+    box-shadow: 10px 10px 1000000px black
+
+  
+
+  .title 
+    font-size: 24px
+    text-align: center
+  
+  
+  .login-form 
+    display: flex
+    flex-direction: column
+    align-items: center
+  
+  
+  .form-group 
+    display: flex
+    justify-content: start
+    width: 100%
+    flex-direction: column
+  
+
+  .form-group button 
+    color: white
+    background-color:rgb(11, 194, 231)
+    border-radius: 20px
+    align-self: center
+  
+
+  .form-group button:hover 
+  background-color: rgb(49, 2, 204)
+  
+
+  #mostrarContrasena 
+    width: 80px
+    align-self: flex-end
+  
+  
+  .form-label 
+    font-size: 16px
+    margin: 10px 0
+  
+  
+  .form-input 
+    width: 100%
+    padding: 8px
+    font-size: 16px
+    border: 3px solid rgb(11, 194, 231)
+    border-radius: 20px
+    align-self: center
+  
+
+  .form-input input:hover, .form-input input:focus, .form-input input:active, .form-input input:focus-visible 
+    border: 1px solid black
+    outline-width: 1px
+    outline-style: solid
+    outline-color: black
+  
+  
+  .show-password-label 
+    font-size: 12px
+  
+  
+  .submit-button 
+    padding: 10px
+    font-size: 16px
+    background-color: rgb(11, 194, 231)
+    color: white
+    border: none
+    border-radius: 20px
+    cursor: pointer
+    margin: 20px
+    width: 100%
+  
+
+  .submit-button:hover 
+  background-color: rgb(49, 2, 204);
+  
+
+  /* registro */
+.registro-container
+  max-width: 300px
+  margin: 65px auto
+  padding: 30px
+  border: 2px solid rgb(11, 194, 231)
+  border-radius: 10px
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 90%
+  box-shadow: 10px 10px 1000000px black
+
+
+
+  /* Titulo */
+  h1 
+    text-align: center
+    margin-top: 100px
+
+  
+
+/* Texto */
+  p  
+    text-align: center
+    font-size: 20px
+  
+
+  /* zona de cifrado */
+  ul 
+    text-align: center
+    list-style-type: none
+    margin: 0
+    padding: 0
+    color: black
+  
+
+  ul li 
+    text-align: center
+    list-style-type: none
+  
+
+  ul li a
+    text-align: center
+    list-style-type: none
+    text-decoration: none
+    font-weight: bold
+    padding: 5px 10px
+    border-radius: 5px
+    transition: background-color 0.3s
+    color: black
+    font-size: 30px
+  
+
+  .container 
+    max-width: 800px
+    margin: 20px auto
+    padding: 0 20px
+  
+
+  /* añadir clientes */ 
+  .clientes-container
+    max-width: 400px
+    margin: 50px auto
+    padding: 30px
+    border: 3px solid rgb(11, 194, 231)
+    border-radius: 10px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 90%
+    box-shadow: 10px 10px 1000000px black
+  
+
+  .form-group 
+    display: flex
+    justify-content: start
+    width: 100%
+    flex-direction: column
+  
+
+  .form-group button 
+    color: white
+    background-color:rgb(11, 194, 231)
+    border-radius: 20px
+    align-self: center
+  
+
+  .form-group button:hover 
+  background-color: rgb(49, 2, 204)
+  
+  
+  .form-label 
+    font-size: 16px
+    margin: 10px 0
+  
+  
+  .form-input 
+    width: 100%
+    padding: 8px
+    font-size: 16px
+    border: 3px solid rgb(11, 194, 231)
+    border-radius: 20px
+    align-self: center
+  
+
+  .form-input input:hover, .form-input input:focus, .form-input input:active, .form-input input:focus-visible 
+    border: 1px solid black
+    outline-width: 1px
+    outline-style: solid
+    outline-color: black
+  
+  
+  .submit-button 
+    padding: 10px
+    font-size: 16px
+    background-color: rgb(11, 194, 231)
+    color: white
+    border: none
+    border-radius: 20px
+    cursor: pointer
+    margin: 20px
+    width: 100%
+  
+
+  .submit-button:hover 
+  background-color: rgb(49, 2, 204)
+  
+ 
+
+  /* oportunidad */ 
+  .oportunidad-container
+    max-width: 400px
+    margin: 50px auto
+    padding: 30px
+    border: 3px solid rgb(11, 194, 231)
+    border-radius: 10px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 90%
+    box-shadow: 10px 10px 1000000px black
+  
+
+  /* Informe */ 
+  .informe-container
+    max-width: 400px
+    margin: 50px auto
+    padding: 30px
+    border: 3px solid rgb(11, 194, 231)
+    border-radius: 10px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 90%
+    box-shadow: 10px 10px 1000000px black
+  
+
+  .form-group 
+    display: flex
+    justify-content: start
+    width: 100%
+    flex-direction: column
+  
+
+  .form-group button 
+    color: white
+    background-color:rgb(11, 194, 231)
+    border-radius: 20px
+    align-self: center
+  
+
+  .form-group button:hover 
+  background-color: rgb(49, 2, 204)
+  
+
+  .form-label 
+    font-size: 16px
+    margin: 10px 0
+  
+  
+  .form-input 
+    width: 100%
+    padding: 8px
+    font-size: 16px
+    border: 3px solid rgb(11, 194, 231)
+    border-radius: 20px
+    align-self: center
+  
+
+  .form-input input:hover, .form-input input:focus, .form-input input:active, .form-input input:focus-visible 
+    border: 1px solid black
+    outline-width: 1px
+    outline-style: solid
+    outline-color: black
+  
+
+  .submit-button 
+    padding: 10px
+    font-size: 16px
+    background-color: rgb(11, 194, 231)
+    color: white
+    border: none
+    border-radius: 20px
+    cursor: pointer
+    margin: 20px
+    width: 100%
+  
+
+  .submit-button:hover 
+  background-color: rgb(49, 2, 204)
+  
+
+  .container 
+    text-align: center
+    box-sizing: border-box
+    text-decoration: double
+  
+  
+  /* clientes */ 
+
+table.table td, table.table th 
+  position: relative
+
+
+.dropdown-content
+  border-radius: 15px
+
+
+  /* botones- agregar */ 
+
+button 
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 10px
+  padding: 0 10px
+  color: white
+  text-shadow: 2px 2px rgb(116, 116, 116)
+  text-transform: uppercase
+  cursor: pointer
+  border: solid 2px black
+  letter-spacing: 1px
+  font-weight: 600
+  font-size: 17px
+  background-color:rgb(11, 194, 231)
+  border-radius: 50px
+  position: relative
+  overflow: hidden
+  transition: all 0.5s ease
+
+
+button:active 
+  transform: scale(0.9)
+  transition: all 100ms ease
+
+
+button svg 
+  transition: all 0.5s ease
+  z-index: 2
+
+
+.play 
+  transition: all 0.5s ease
+  transition-delay: 300ms
+
+
+button:hover svg 
+  transform: scale(3) translate(50%)
+
+
+.now 
+  position: absolute
+  left: 0
+  transform: translateX(-100%)
+  transition: all 0.5s ease
+  z-index: 2
+
+
+button:hover .now 
+  transform: translateX(10px)
+  transition-delay: 300ms
+
+
+button:hover .play 
+  transform: translateX(200%)
+  transition-delay: 300ms
+
+
+
+
+
+
+
+
+
+  
+  
+ 

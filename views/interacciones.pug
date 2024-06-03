@@ -1,0 +1,54 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title STEFAN-ORDINARIO-CLIENTE-
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    nav
+      ul
+        li
+          a(href='/') Inicio
+        li.dropdown
+          a(href='#') -Agregar-
+          .dropdown-content
+            a(href='/cesar') Agregar Cliente.
+            a(href='/sustitucion') Agregar Oportunidad de Venta.
+            a(href='/hexadecimal') Agregar Informe. 
+
+        li.dropdown
+          a(href='#') -Ver-
+          .dropdown-content
+            a(href='/clientes') Ver Cliente.
+            a(href='/ventas') Ver Oportunidad de Venta.
+            a(href='/informes') Ver Informe.   
+
+    .container
+    block content
+    h1 Interacciones Registradas
+    <div class="container">
+       a(href='/base64') Agregar Interacciones.</a>
+    </div>
+      if interactions.length > 0
+        table.table.table-striped
+          thead.thead-dark
+            tr
+              th | Tipo de Interacción. |
+              th Fecha de la interaccion. |
+              th Descripción de la Interaccion. |
+          tbody
+            each interaction in interactions
+              tr
+                td= interaction.tipo
+                td= interaction.fecha
+                td= interaction.descripcion
+      else
+        p No hay interacciones registradas.
+    script.
+
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('Página de interacciones cargada');
+      });
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")

@@ -1,0 +1,74 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title STEFAN-ORDINARIO-CLIENTE-
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    nav
+      ul
+        li
+          a(href='/') Inicio
+        li.dropdown
+          a(href='#') -Agregar-
+          .dropdown-content
+            a(href='/cesar') Agregar Cliente.
+            a(href='/sustitucion') Agregar Oportunidad de Venta.
+            a(href='/base64') Agregar Interaccion.
+
+        li.dropdown
+          a(href='#') -Ver-
+          .dropdown-content
+            a(href='/clientes') Ver Cliente.
+            a(href='/ventas') Ver Oportunidad de Venta.
+            a(href='/interacciones') Ver Interaccion.
+           
+
+    .container
+    block content
+  .informe-container
+    h1 Informe de Venta
+    <div class="container">
+       a(href='/informes') Ver Informes Agregados.</a>
+    </div>
+
+      form(action="/submit-venta" method="post")
+        .form-group
+          label(for="usuario-id") ID del Usuario.
+          input#venta-id.form-control(type="text" placeholder='ID del Usuario' name="usuarioId" required)
+
+        .form-group
+          label(for="cliente-nombre") Nombre del Cliente.
+          input#cliente-nombre.form-control(type="text" placeholder='Nombre del Cliente' name="clienteNombre" required)
+
+        .form-group
+          label(for="fecha-venta") Fecha de la Venta.
+          input#fecha-venta.form-control(type="date" name="fechaVenta" required)
+
+        .form-group
+          label(for="monto-venta") Monto de la Venta.
+          input#monto-venta.form-control(type="number" step="0.01" placeholder='Monto de la Venta' name="montoVenta" required)
+
+        .form-group
+          label(for="producto-vendido") Producto Vendido.
+          input#producto-vendido.form-control(type="text" placeholder='Producto Vendido' name="productoVendido" required)
+
+        .form-group
+          label(for="satisfaccion-cliente") Satisfacción del Cliente.
+          select#satisfaccion-cliente.form-control(name="satisfaccionCliente" required)
+            option(value="muy satisfecho") Muy Satisfecho.
+            option(value="satisfecho") Satisfecho.
+            option(value="neutral") Neutral.
+            option(value="insatisfecho") Insatisfecho.
+            option(value="muy insatisfecho") Muy Insatisfecho.
+
+        .form-group
+          label(for="comentarios-cliente") Comentarios del Cliente.
+          textarea#comentarios-cliente.form-control(name="comentariosCliente" rows="3")
+
+        
+        .form-group
+          button.btn.btn-primary(type="submit") -Agregar Informe-
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")

@@ -1,0 +1,81 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title STEFAN-ORDINARIO-CLIENTE-
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    nav
+      ul
+        li
+          a(href='/') Inicio
+        
+        li.dropdown
+          a(href='#') -Agregar-
+          .dropdown-content
+            
+            a(href='/sustitucion') Agregar Oportunidad de Venta.
+            a(href='/base64') Agregar Interaccion.
+            a(href='/hexadecimal') Agregar Informe. 
+
+        li.dropdown
+          a(href='#') -Ver-
+          .dropdown-content
+            a(href='/ventas') Ver Oportunidad de ventas.
+            a(href='/interacciones') Ver Interacciones.
+            a(href='/informes') Ver Informes.     
+    .container
+    block content
+
+    h1 Agregar Cliente.
+    <div class="container">
+       a(href='/clientes') Ver Clientes Agregados.</a>
+    </div>
+
+  //- Formulario para agregar cliente
+.clientes-container 
+  form(action="/add-client", method="POST", class='cliente-form')
+
+    .form-group
+     label(for="usuarioId") ID del Usuario:
+     input(type="text" id="usuarioId" placeholder='ID del Usuario' name="usuarioId" required)
+          
+    .form-group
+     label(for="nombre") Nombre:
+     input(type="text", id="nombre", placeholder='Nombre' name="nombre", required=true)
+
+    .form-group
+     label(for="empresa") Nombre de la Empresa:
+     input(type="text", id="empresa", placeholder='Nombre de la Empresa' name="empresa", required=true)
+
+    .form-group
+     label(for="correo") Correo Electrónico:
+     input(type="email", id="correo", placeholder='Correo Electronico' name="correo", required=true)
+
+    .form-group
+     label(for="telefono") Teléfono del cliente:
+     input(type="tel", id="telefono", placeholder='Telefono del Cliente' name="telefono", required=true)
+
+    .form-group
+      label(for="industria") Industria de la Empresa:
+      select(id="industria", name="industria", required=true)
+          option(value="Tecnología") Tecnología
+          option(value="Finanzas") Finanzas
+          option(value="Salud") Salud
+          option(value="Educación") Educación
+          option(value="Otro") Otro
+
+    .form-group
+      label(for="tamano") Tamaño de la Empresa:
+      input(type="text", id="tamano", placeholder='Tamaño de la Empresa' name="tamano", required=true)
+
+    .form-group
+     label(for="direccion") Dirección:
+     input(type="text", id="direccion", placeholder='Direccion' name="direccion", required=true)
+
+    .form-group
+     button(type="submit") -Agregar Cliente-
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
